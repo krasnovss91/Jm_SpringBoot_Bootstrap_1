@@ -3,7 +3,7 @@ $(document).ready(function () {
         event.preventDefault();
         let href = $(this).attr('href');
 
-        $.get(href, function (user, status) {
+        $.get(href, function (user) {
             $('.myForm #id').val(user.id)
             $('.myForm #username').val(user.username)
             $('.myForm #password').val(user.password)

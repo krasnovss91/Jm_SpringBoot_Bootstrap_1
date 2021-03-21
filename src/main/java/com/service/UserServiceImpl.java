@@ -62,6 +62,7 @@ public class UserServiceImpl implements UserService {
             password = passwordEncoder.encode(password);
         }
 
+      // if (!passwordEncoder.matches(password, userFromDB.getPassword())){
         if(!password.equals(userFromDB.getPassword())){
 
             user.setPassword(password);
